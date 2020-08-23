@@ -1,0 +1,2170 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<!-----------------------------------------------------------------------
+ 
+Theme 37 Interphase
+by yukoki/s-ekki
+ 
+1. Light/Heavy CSS editting is allowed.
+2. Do not use as base code.
+3. Do not remove credit.
+4. Do not claim theme as your own.
+ 
+---------------------------------------------------------- VER 051117 -->
+ 
+<meta name="color:scrollbar" content="#9D86A3">
+<meta name="color:tooltips text" content="#ffffff">
+<meta name="color:tooltips background" content="#000000">
+<meta name="color:background" content="#000000">
+<meta name="color:window background" content="#ffffff">
+<meta name="color:window border" content="#ffffff">
+<meta name="color:window title" content="#ffffff">
+<meta name="color:window title bg" content="#ffffff">
+<meta name="color:window title buttons" content="#ffffff">
+<meta name="color:window title buttons background" content="#ffffff">
+<meta name="color:taskbar background" content="#ffffff">
+<meta name="color:taskbar icon" content="#dddddd">
+<meta name="color:taskbar icon hover bg" content="#ffffff">
+<meta name="color:taskbar widgets on right" content="#ffffff">
+<meta name="color:system menu background" content="#000000">
+<meta name="color:system menu link" content="#dddddd">
+<meta name="color:system menu link hover" content="#ffffff">
+<meta name="color:desktop icon" content="#ffffff">
+<meta name="color:desktop icon title" content="#ffffff">
+<meta name="color:desktop icon background" content="#ffffff">
+<meta name="color:desktop icon select bg" content="#ffffff">
+<meta name="color:sticky note title" content="#ffffff">
+<meta name="color:sticky note text" content="#ffffff">
+<meta name="color:sticky note background" content="#ffffff">
+<meta name="color:post nav text" content="#ffffff">
+<meta name="color:post nav hover" content="#ffffff">
+<meta name="color:current folder" content="#ffffff">
+<meta name="color:inactive folder" content="#f0f0f0">
+<meta name="color:post background" content="#ffffff">
+<meta name="color:body text" content="#ffffff">
+<meta name="color:body bold" content="#000000">
+<meta name="color:body italic" content="#000000">
+<meta name="color:body links" content="#000000">
+<meta name="color:body links hover" content="#000000">
+<meta name="color:blockquote" content="#ffffff">
+<meta name="color:permalink actions" content="#ffffff">
+<meta name="color:post title" content="#ffffff">
+<meta name="color:post desc" content="#ffffff">
+<meta name="color:post desc bg" content="#000000">
+ 
+<meta name="if:2 column 250px posts" content="1">
+<meta name="if:cover wallpaper" content="0">
+<meta name="if:cover window background" content="0">
+<meta name="if:display sticky notes instantly" content="0">
+<meta name="if:different window background" content="0">
+<meta name="if:built in music player" content="0">
+ 
+<meta name="image:about icon" content="">
+<meta name="image:wallpaper" content="">
+<meta name="image:window background" content="">
+<meta name="image:photo upload 1" content="">
+<meta name="image:photo upload 2" content="">
+<meta name="image:photo upload 3" content="">
+<meta name="image:photo upload 4" content="">
+<meta name="image:photo upload 5" content="">
+ 
+<meta name="text:url" content="url">
+<meta name="text:name" content="name">
+<meta name="text:birthday" content="00/00/00">
+<meta name="text:country" content="country">
+<meta name="text:personality" content="mbti">
+<meta name="text:status" content="active">
+<meta name="text:billy music player code" content="">
+<meta name="text:link 1" content="">
+<meta name="text:link 1 url" content="">
+<meta name="text:link 1 icon" content="">
+<meta name="text:link 2" content="">
+<meta name="text:link 2 url" content="">
+<meta name="text:link 2 icon" content="">
+<meta name="text:link 3" content="">
+<meta name="text:link 3 url" content="">
+<meta name="text:link 3 icon" content="">
+<meta name="text:link 4" content="">
+<meta name="text:link 4 url" content="">
+<meta name="text:link 4 icon" content="">
+<meta name="text:link 5" content="">
+<meta name="text:link 5 url" content="">
+<meta name="text:link 5 icon" content="">
+<meta name="text:link 6" content="">
+<meta name="text:link 6 url" content="">
+<meta name="text:link 6 icon" content="">
+<meta name="text:photo upload 1 title" content="">
+<meta name="text:photo upload 1 width" content="180px">
+<meta name="text:photo upload 2 title" content="">
+<meta name="text:photo upload 2 width" content="180px">
+<meta name="text:photo upload 3 title" content="">
+<meta name="text:photo upload 3 width" content="180px">
+<meta name="text:photo upload 4 title" content="">
+<meta name="text:photo upload 4 width" content="180px">
+<meta name="text:photo upload 5 title" content="">
+<meta name="text:photo upload 5 width" content="180px">
+<meta name="text:sticky note 1 width" content="140px">
+<meta name="text:sticky note 1 text" content="">
+<meta name="text:sticky note 2 width" content="160px">
+<meta name="text:sticky note 2 text" content="">
+<meta name="text:sticky note 3 width" content="200px">
+<meta name="text:sticky note 3 text" content="">
+ 
+<!-- script for tooltips -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="http://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:0,
+tip_fade_speed:0,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
+<!-- end script for tooltips -->
+ 
+<!-- script for time -->
+<script type="text/javascript">
+function GetClock(){
+var d=new Date();
+var nhour=d.getHours(),nmin=d.getMinutes(),ap;
+if(nhour==0){ap=" AM";nhour=12;}
+else if(nhour<12){ap=" AM";}
+else if(nhour==12){ap=" PM";}
+else if(nhour>12){ap=" PM";nhour-=12;}
+ 
+if(nmin<=9) nmin="0"+nmin;
+ 
+document.getElementById('clockbox').innerHTML=""+nhour+":"+nmin+ap+"";
+}
+ 
+window.onload=function(){
+GetClock();
+setInterval(GetClock,1000);
+}
+</script>
+<!-- end script for time -->
+ 
+<!-- script for moving java -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#closesbimg1").click(function(){$("#sbimg1").fadeOut();}); /** closing sb image 1 **/
+$("#opensbimg1").click(function(){$("#sbimg1").fadeIn();}); /** opening sb image 1 **/
+$("#closesbimg2").click(function(){$("#sbimg2").fadeOut();}); /** closing sb image 2 **/
+$("#opensbimg2").click(function(){$("#sbimg2").fadeIn();}); /** opening sb image 2 **/
+$("#closesbimg3").click(function(){$("#sbimg3").fadeOut();}); /** closing sb image 3 **/
+$("#opensbimg3").click(function(){$("#sbimg3").fadeIn();}); /** opening sb image 3 **/
+$("#closesbimg4").click(function(){$("#sbimg4").fadeOut();}); /** closing sb image 4 **/
+$("#opensbimg4").click(function(){$("#sbimg4").fadeIn();}); /** opening sb image 4 **/
+$("#closesbimg5").click(function(){$("#sbimg5").fadeOut();}); /** closing sb image 5 **/
+$("#opensbimg5").click(function(){$("#sbimg5").fadeIn();}); /** opening sb image 5 **/
+$("#closearchivepop").click(function(){$("#archivepop").fadeOut();}); /** closing archive pop up **/
+$("#openarchivepop").click(function(){$("#archivepop").fadeIn();}); /** opening archive pop up **/
+$("#closeaboutpop").click(function(){$("#aboutpop").fadeOut();}); /** closing about pop up **/
+$("#openaboutpop").click(function(){$("#aboutpop").fadeIn();}); /** opening about pop up **/
+$("#closeaskboxpop").click(function(){$("#askboxpop").fadeOut();}); /** closing askbox pop up **/
+$("#openaskboxpop").click(function(){$("#askboxpop").fadeIn();}); /** opening askbox pop up **/
+$("#closeblogrollpop").click(function(){$("#blogrollpop").fadeOut();}); /** closing blogroll pop up **/
+$("#openblogrollpop").click(function(){$("#blogrollpop").fadeIn();}); /** opening blogroll pop up **/
+$("#closesticky1").click(function(){$("#sticky1").fadeOut();}); /** closing sticky1 **/
+$("#opensticky").click(function(){$("#sticky1").fadeIn();}); /** opening sticky1 **/
+$("#closesticky2").click(function(){$("#sticky2").fadeOut();}); /** closing sticky2 **/
+$("#opensticky").click(function(){$("#sticky2").fadeIn();}); /** opening sticky2 **/
+$("#closesticky3").click(function(){$("#sticky3").fadeOut();}); /** closing sticky3 **/
+$("#opensticky").click(function(){$("#sticky3").fadeIn();}); /** opening sticky3 **/
+$("#closecontentpop").click(function(){$("#contentpop").fadeOut();}); /** closing content pop up **/
+$("#opencontentpop").click(function(){$("#contentpop").fadeIn();}); /** opening conten tpop up **/
+ 
+$("#openpost1").click(function(){$("#postpop1").fadeIn();});
+$("#closepost1").click(function(){$("#postpop1").fadeOut();});
+$("#openpost2").click(function(){$("#postpop2").fadeIn();});
+$("#closepost2").click(function(){$("#postpop2").fadeOut();});
+$("#openpost3").click(function(){$("#postpop3").fadeIn();});
+$("#closepost3").click(function(){$("#postpop3").fadeOut();});
+$("#openpost4").click(function(){$("#postpop4").fadeIn();});
+$("#closepost4").click(function(){$("#postpop4").fadeOut();});
+$("#openpost5").click(function(){$("#postpop5").fadeIn();});
+$("#closepost5").click(function(){$("#postpop5").fadeOut();});
+$("#openpost6").click(function(){$("#postpop6").fadeIn();});
+$("#closepost6").click(function(){$("#postpop6").fadeOut();});
+$("#openpost7").click(function(){$("#postpop7").fadeIn();});
+$("#closepost7").click(function(){$("#postpop7").fadeOut();});
+$("#openpost8").click(function(){$("#postpop8").fadeIn();});
+$("#closepost8").click(function(){$("#postpop8").fadeOut();});
+$("#openpost9").click(function(){$("#postpop9").fadeIn();});
+$("#closepost9").click(function(){$("#postpop9").fadeOut();});
+$("#openpost10").click(function(){$("#postpop10").fadeIn();});
+$("#closepost10").click(function(){$("#postpop10").fadeOut();});
+$("#openpost11").click(function(){$("#postpop11").fadeIn();});
+$("#closepost11").click(function(){$("#postpop11").fadeOut();});
+$("#openpost12").click(function(){$("#postpop12").fadeIn();});
+$("#closepost12").click(function(){$("#postpop12").fadeOut();});
+$("#openpost13").click(function(){$("#postpop13").fadeIn();});
+$("#closepost13").click(function(){$("#postpop13").fadeOut();});
+$("#openpost14").click(function(){$("#postpop14").fadeIn();});
+$("#closepost14").click(function(){$("#postpop14").fadeOut();});
+$("#openpost15").click(function(){$("#postpop15").fadeIn();});
+$("#closepost15").click(function(){$("#postpop15").fadeOut();});
+ 
+$("#openpost1a").click(function(){$("#postpop1").fadeIn();});
+$("#openpost2a").click(function(){$("#postpop2").fadeIn();});
+$("#openpost3a").click(function(){$("#postpop3").fadeIn();});
+$("#openpost4a").click(function(){$("#postpop4").fadeIn();});
+$("#openpost5a").click(function(){$("#postpop5").fadeIn();});
+$("#openpost6a").click(function(){$("#postpop6").fadeIn();});
+$("#openpost7a").click(function(){$("#postpop7").fadeIn();});
+$("#openpost8a").click(function(){$("#postpop8").fadeIn();});
+$("#openpost9a").click(function(){$("#postpop9").fadeIn();});
+$("#openpost10a").click(function(){$("#postpop10").fadeIn();});
+$("#openpost11a").click(function(){$("#postpop11").fadeIn();});
+$("#openpost12a").click(function(){$("#postpop12").fadeIn();});
+$("#openpost13a").click(function(){$("#postpop13").fadeIn();});
+$("#openpost14a").click(function(){$("#postpop14").fadeIn();});
+$("#openpost15a").click(function(){$("#postpop15").fadeIn();});
+});
+ 
+$(document).ready(function(){
+$(".taskbariconi").click(function(){$(".systempopup").fadeToggle();});
+$(".taskbariconi").click(function(){$(".taskbariconi").toggleClass("tbibg2");});
+});
+</script>
+<!-- end script for moving java -->
+ 
+<!-- drag script -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+ 
+$(function() {
+    $( "#sbimg1" ).draggable({ handle: "div.dragimg1" });
+    $( "#sbimg2" ).draggable({ handle: "div.dragimg2" });
+    $( "#sbimg3" ).draggable({ handle: "div.dragimg3" });
+    $( "#sbimg4" ).draggable({ handle: "div.dragimg4" });
+    $( "#sbimg5" ).draggable({ handle: "div.dragimg5" });
+    $( "#archivepop" ).draggable({ handle: "div.dragarchive" });
+    $( "#contentpop" ).draggable({ handle: "div.dragcontent" });
+    $( "#aboutpop" ).draggable({ handle: "div.dragabout" });
+    $( "#askboxpop" ).draggable({ handle: "div.dragaskbox" });
+    $( "#blogrollpop" ).draggable({ handle: "div.dragblogroll" });
+    $( ".shortcut" ).draggable({ grid: [ 100, 98 ] });
+    $( "#sticky1" ).draggable({ handle: "div.dragsticky1" });
+    $( "#sticky2" ).draggable({ handle: "div.dragsticky2" });
+    $( "#sticky3" ).draggable({ handle: "div.dragsticky3" });
+});
+ 
+</script>
+<!-- end drag script -->
+ 
+<title>{title}{block:PostSummary}, {PostSummary}{/block:PostSummary}</title>
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+<link rel="shortcut icon" href="{Favicon}" />
+ 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+ 
+<style type="text/css">
+ 
+@font-face { font-family: "ebit"; src: url('https://dl.dropboxusercontent.com/s/n9ry4w2f8tl60t3/8bitoperator.ttf'); }
+@font-face { font-family: "pix"; src: url('https://dl.dropboxusercontent.com/s/68bdyrv4fsayhg8/04B_03__.TTF'); }
+@font-face { font-family: "bit"; src: url('https://dl.dropboxusercontent.com/s/sq28ejp56rarabs/BitxMap%20Font%20tfb.ttf'); }
+ 
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track-piece { background-color: transparent; }
+::-webkit-scrollbar-thumb:vertical {
+    width: 4px;
+    background-color: {color:scrollbar};
+    opacity: 0.4;
+}
+ 
+#s-m-t-tooltip {
+    z-index: 1000000000000000000000000000000000000;
+    max-width: 300px;
+    background-color: rgba({RGBcolor:tooltips background},0.6);
+    color: {color:tooltips text};
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: ebit;
+    font-size: 8px;
+    padding: 6px 8px;
+    margin: 20px 0 0 20px;
+}
+ 
+body {
+    background-color: {color:background};
+    background-image: url({image:wallpaper});
+    {block:ifcoverwallpaper}background-size:cover;{/block:ifcoverwallpaper}
+    background-attachment: fixed;
+    margin: 0;
+    word-wrap: break-word;
+}
+a { text-decoration:none; }
+ 
+#sbimg1, #sbimg2, #sbimg3, #sbimg4, #sbimg5, #archivepop, #askboxpop, #aboutpop, #blogrollpop, #contentpop {
+    position: fixed;
+    top: 140px;
+    left: 180px;
+    display: block;
+    width: 180px;
+    padding: 20px;
+    background-color: rgba({RGBcolor:window background},0.2);
+    border: 1px solid rgba({RGBcolor:window border},0.2);
+    border-radius: 0 0 8px 8px;
+}
+#sbimg1, #sbimg2, #sbimg3, #sbimg4, #sbimg5 { display: none; }
+#sbimg1 {z-index: 1005;top: 140px; left: 320px;}
+#sbimg2 {z-index: 1004;top: 80px; left: 500px;}
+#sbimg3 {z-index: 1003;top: 100px; left: 560px;}
+#sbimg4 {z-index: 1002;top: 230px; left: 100px;}
+#sbimg5 {z-index: 1001;top: 300px; left: 300px;}
+ 
+.sbimg2, .sbimg3, .sbimg4, .sbimg5 { display: block; }
+ 
+.blogt1, .blogt2, .blogt3, .blogt4, .blogt5, .blogtarchive, .blogtaskbox, .blogtabout, .blogtblogroll, .blogtcontent {
+    font-family: pix;
+    font-size: 8px;
+    color: {color:window title};
+    letter-spacing: 1px;
+    padding: 10px 21px 8px 21px;
+    width: 180px;
+    position: absolute;
+    background-color: rgba({RGBcolor:window title bg},0.3);
+    text-transform: uppercase;
+    margin: -47px -21px;
+    border-radius: 8px 8px 0 0;
+}
+ 
+.menubtn1, .menubtn2, .menubtn3, .menubtn4, .menubtn5, .menubtnarchive, .menubtnaskbox, .menubtnabout, .menubtnblogroll, .menubtncontent {
+    font-family: pix;
+    font-size: 10px;
+    color: {color:window title buttons};
+    text-align: right;
+    width: 180px;
+    position: absolute;
+    margin-top: -46px;
+    margin-left: 4px;
+    letter-spacing: 3px;
+    z-index: 1;
+}
+ 
+.menubtnarchive, .blogtarchive { width: 580px; }
+.menubtnaskbox, .blogtaskbox { width: 500px; }
+.menubtnabout, .blogtabout { width: 500px; }
+.menubtnblogroll, .blogtblogroll { width: 500px; }
+.menubtncontent, .blogtcontent {
+    {block:if2column250pxposts}
+    {block:indexpage}width: 860px;{/block:indexpage}
+    {block:permalinkpage}width: 680px;{/block:permalinkpage}
+    {/block:if2column250pxposts}
+    {block:ifnot2column250pxposts}
+    width: 680px;
+    {/block:ifnot2column250pxposts}
+}
+ 
+.sbimg1, #sbimg1, .menubtn1, .blogt1 {width:{text:photo upload 1 width};}
+.sbimg2, #sbimg2, .menubtn2, .blogt2 {width:{text:photo upload 2 width};}
+.sbimg3, #sbimg3, .menubtn3, .blogt3 {width:{text:photo upload 3 width};}
+.sbimg4, #sbimg4, .menubtn4, .blogt4 {width:{text:photo upload 4 width};}
+.sbimg5, #sbimg5, .menubtn5, .blogt5 {width:{text:photo upload 5 width};}
+ 
+.mbt {color: {color:window title buttons}; background-color: rgba({RGBcolor:window title buttons background},0.1);padding:2px 6px 4px 7px;letter-spacing: 2px;margin-left:1px;}
+ 
+.menubtn1 a, .menubtn2 a, .menubtn3 a, .menubtn4 a, .menubtn5 a, .menubtnarchive a, .menubtnaskbox a, .menubtnabout a, .menubtnblogroll a, .menubtncontent a { color: {color:window title buttons}; background-color: rgba({RGBcolor:window title buttons background},0.2);padding:2px 6px 4px 7px;letter-spacing: 2px;margin-left:1px; }
+ 
+#taskbar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 20px 0 0;
+    background-color: rgba({RGBcolor:taskbar background},0.4);
+    z-index: 10000;
+}
+ 
+.taskbaricon, .taskbariconi {
+    padding: 10px;
+    background-color: rgba({RGBcolor:taskbar icon hover bg},0.1);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: {color:taskbar icon};
+    font-size: 14px;
+    transition: 0.8s;
+}
+.taskbaricon {background-color: rgba({RGBcolor:taskbar icon hover bg},0); }
+.tbibg2 {background-color: rgba({RGBcolor:taskbar icon hover bg},0.2); }
+ 
+#system {width: 40px;}
+ 
+.systempopup {
+    position: absolute;
+    background-color: rgba({RGBcolor:system menu background},0.7);
+    font-family: ebit;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: {color:system menu link};
+    width: 140px;
+    margin: -160px 0;
+    padding: 10px 0;
+    display: none;
+    background-attachment: fixed;
+}
+ 
+.syslink {
+    color: {color:system menu link};
+    padding: 7px 10px;
+    transition: 0.8s;
+}
+ 
+.syslink:hover {
+    color: {color:system menu link hover};
+    background-color: rgba({RGBcolor:system menu background},0.6);
+}
+ 
+.sputri {
+    position: absolute;
+    color: rgba({RGBcolor:system menu background},0.7);
+    font-size: 30px;
+    margin-top: -10px;
+    margin-left: 8px;
+}
+ 
+#system, #task {
+    float: left;
+    margin-right: 10px;
+}
+ 
+#task:hover .taskbaricon {
+    background-color: rgba({RGBcolor:taskbar icon hover bg},0.1);
+}
+ 
+#taskbarright {
+    margin-right: 20px;
+    float: right;
+    line-height: 40px;
+    color: {color:taskbar widgets on right};
+    height: 40px;
+}
+ 
+#clockbox {
+    text-align: right;
+    font-size: 14px;
+    font-family: ebit;
+    float: left;
+    margin-left: 20px;
+    color: {color:taskbar widgets on right};
+}
+ 
+.tbbattery, .tbvolume {float: left;}
+.tbvolume {margin-right: 20px;}
+ 
+.bimh:hover .bimp { opacity: 1; margin: -50px -40px; }
+.bimh:hover .bimptri { opacity: 1; margin-top: -34px; }
+ 
+.bimp {
+    float: left;
+    background-color: rgba({RGBcolor:system menu background},0.8);
+    position: absolute;
+    margin: -40px -40px;
+    height: 30px;
+    width: 160px;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+ 
+.bimptri {
+    color: rgba({RGBcolor:system menu background},0.8);
+    position: absolute;
+    margin-top: -24px;
+    opacity: 0;
+    transition: 0.8s;
+}
+ 
+.muse {margin-top: -10px;padding: 0 10px;}
+ 
+#desktop, #desktop2, #desktop3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+ 
+#desktop2 {left: 100px; }
+#desktop3 { left: 200px; }
+ 
+.shortcut {
+    margin: 8px 0 0 10px;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+}
+ 
+.shortcuticon {
+    color: {color:desktop icon};
+    font-size: 30px;
+    text-align: center;
+}
+ 
+.shortcuticon a { color: {color:desktop icon}; }
+ 
+.shortcutname {
+    font-family: pix;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: {color:desktop icon title};
+    line-height: 15px;
+    margin-top: 6px;
+}
+ 
+.scn, .senpie {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+ 
+.scnbg {
+    padding: 4px 5px 3px 7px;
+    background-color: rgba({RGBcolor:desktop icon background},0.1);
+}
+ 
+.shortcut:hover {background-color: rgba({RGBcolor:desktop icon select bg},0.04);}
+.shortcut:active {background-color: rgba({RGBcolor:desktop icon select bg},0.1);}
+ 
+.smolsbimg {
+    margin-bottom: -2px;
+    max-height: 40px;
+    max-width: 70px;
+}
+ 
+#archivepop, #askboxpop, #aboutpop, #blogrollpop, #contentpop {
+    width: 580px;
+    height: 400px;
+    position: fixed;
+    top: 100px;
+    left: 400px;
+    z-index: 1100;
+}
+ 
+#askboxpop, #aboutpop, #blogrollpop {
+    width: 500px;
+    height: 200px;
+    top: 130px;
+    left: 530px;
+}
+ 
+#aboutpop { height: 300px; top: 150px; }
+#askboxpop { top: 210px; }
+#blogrollpop { top: 150px; }
+ 
+#askboxpop, #aboutpop, #archivepop, #blogrollpop { display:none; }
+ 
+#aboutwrap, #blogrollwrap {
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    background-attachment: fixed;
+    opacity: 0.8;
+    margin: -20px;
+    border-radius: 0 0 8px 8px;
+    {block:ifnotdifferentwindowbackground}
+    background-color: {color:background};
+    background-image: url({image:wallpaper});
+    {block:ifcoverwallpaper}background-size:cover;{/block:ifcoverwallpaper}
+    {/block:ifnotdifferentwindowbackground}
+    {block:ifdifferentwindowbackground}
+    background-color: {color:window background};
+    background-image: url({image:window background});
+    {block:ifcoverwindowbackground}background-size:cover;{/block:ifcoverwindowbackground}
+    {/block:ifdifferentwindowbackground}
+}
+ 
+.leftabout {
+    width: 160px;
+    height: 300px;
+    float: left;
+    position: absolute;
+    z-index: 1;
+}
+
+.labimgs {
+    padding: 10px 20px 30px 20px;
+}
+ 
+.labimg {
+    width: 120px;
+    height: 120px;
+    display: block;
+    border-radius: 1000px;
+}
+ 
+.aboutinfo {
+    font-family: bit;
+    font-size: 10px;
+    color: {color:body text};
+    text-transform: uppercase;
+}
+ 
+.aboutinfo b,strong, .desc b,strong {
+    color: {color:body bold};
+    font-weight: 400;
+}
+ 
+.rightabout {
+    width: 300px;
+    height: 260px;
+    overflow: auto;
+    margin-left: 200px;
+    position: absolute;
+    z-index: 1;
+    border-left: 1px solid rgba({RGBcolor:window border},0.5);
+    margin: 20px 0 20px 180px;
+}
+ 
+.desc {
+    margin: 20px 20px 20px 30px;
+    font-family: bit;
+    font-size: 10px;
+    color: {color:body text};
+}
+ 
+.desc i,em {
+    color: {color:body italic};
+}
+ 
+.desc a {
+    color: {color:body links};
+    text-decoration: underline;
+}
+ 
+.desc a:hover { color: {color:body links hover}; }
+ 
+#blogrollpop {width:500px;height: 300px;}
+#blogrollwrap {z-index:1;position: absolute;}
+ 
+.followingu {
+    height: 48px;
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 215px;
+    background-color: rgba({RGBcolor:post background},0.055);
+    padding: 10px;
+    margin: 0 5px 10px 5px;r
+}
+.foimg {
+    width: 48px;
+    height: 48px;
+    display: block;
+    position: absolute;
+}
+.senpai {
+    font-family: ebit;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 12px;
+    color: {color:body text};
+    width: 137px;
+    height: 48px;
+    margin-left: 58px;
+}
+ 
+.kouhai {
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: pix;
+    line-height: 8px;
+    margin-top: 2px;
+}
+ 
+#blogrollt {
+    height: 300px;
+    overflow:auto;
+    position: relative;
+    z-index:2;
+}
+ 
+#sticky1, #sticky2, #sticky3 {
+    position: fixed;
+    top: 120px;
+    width: 160px;
+    padding: 10px;
+    background-color: rgba({RGBcolor:sticky note background},0.4);
+    color: {color:sticky note text};
+    font-family: ebit;
+    font-size: 9px;
+    letter-spacing: 1px;
+    z-index: 1001;
+    {block:ifnotdisplaystickynotesinstantly}
+    display: none;
+    {/block:ifnotdisplaystickynotesinstantly}
+}
+ 
+#sticky1 {
+    top: 50px;
+    right: 30px;
+}
+ 
+#sticky2 {
+    top: 170px;
+    right: 30px;
+}
+ 
+#sticky3 {
+    top: 200px;
+    right: 30px;
+}
+ 
+.stickyt1, .stickyt2, .stickyt3 {
+    position: absolute;
+    background-color: rgba({RGBcolor:sticky note background},0.6);
+    margin: -34px -10px;
+    padding: 8px 10px;
+    font-family: pix;
+    font-size: 8px;
+    text-transform: uppercase;
+    width: 160px;
+    letter-spacing: 1px;
+}
+ 
+.menubtnsticky1, .menubtnsticky2, .menubtnsticky3 {
+    text-align: right;
+    width: 160px;
+    padding: 8px 10px;
+    font-family: pix;
+    position: absolute;
+    margin: -34px -10px;
+    z-index: 1;
+}
+ 
+#sticky1, .stickyt1, .menubtnsticky1 {width:{text:sticky note 1 width};}
+#sticky2, .stickyt2, .menubtnsticky2 {width:{text:sticky note 2 width};}
+#sticky3, .stickyt3, .menubtnsticky3 {width:{text:sticky note 3 width};}
+ 
+#contentpop {
+    top: 90px;
+    left: 350px;
+    position: fixed;
+    z-index: 1000;
+    {block:ifnot2column250pxposts}
+    width: 680px;
+    {/block:ifnot2column250pxposts}
+    {block:if2column250pxposts}
+    {block:indexpage}width: 860px;{/block:indexpage}
+    {block:permalinkpage}width: 680px;{/block:permalinkpage}
+    {/block:if2column250pxposts}
+    height: 400px;
+}
+ 
+.contentwrap {
+    {block:ifnot2column250pxposts}
+    width: 680px;
+    {/block:ifnot2column250pxposts}
+    {block:if2column250pxposts}
+    {block:indexpage}width: 860px;{/block:indexpage}
+    {block:permalinkpage}width: 680px;{/block:permalinkpage}
+    {/block:if2column250pxposts}
+    height: 400px;
+    padding: 20px;
+    margin: -20px;
+    background-attachment: fixed;
+    opacity: 0.95;
+    position: absolute;
+    border-radius: 0 0 8px 8px;
+    z-index: 0;
+    {block:ifnotdifferentwindowbackground}
+    background-color: {color:background};
+    background-image: url({image:wallpaper});
+    {block:ifcoverwallpaper}background-size:cover;{/block:ifcoverwallpaper}
+    {/block:ifnotdifferentwindowbackground}
+    {block:ifdifferentwindowbackground}
+    background-color: {color:window background};
+    background-image: url({image:window background});
+    {block:ifcoverwindowbackground}background-size:cover;{/block:ifcoverwindowbackground}
+    {/block:ifdifferentwindowbackground}
+}
+ 
+.contentleft {
+    width: 160px;
+    height: 400px;
+    overflow: auto;
+    padding-right: 10px;
+    position: absolute;
+    z-index: 1;
+    color: {color:post nav text};
+    border-right: 1px solid rgba({RGBcolor:window border},0.3);
+}
+ 
+.postnav {
+    font-family: bit;
+    font-size: 10px;
+    color: {color:post nav text};
+    padding: 3px 10px 6px 10px;
+    transition: 0.8s;
+    width: 140px;
+    height: 14px;
+    line-height: 16px;
+    overflow: hidden;
+    margin-bottom: 2px;
+}
+ 
+.postnav:hover {background-color: rgba({RGBcolor:postnavhover},0.3);}
+.postnav a { color: {color:post nav text}; }
+.posticon {float: left;margin-right: 10px;}
+.pnex {width: 300px;}
+ 
+.currentfolder, .inactivefolder {
+    width: 160px;
+    font-family: bit;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: {color:current folder};
+}
+ 
+.inactivefolder a { color: {color:inactive folder}; }
+ 
+.folderbline {
+    background-color: rgba({RGBcolor:window border},0.3);
+    height: 1px;
+    width: 80px;
+    margin-left: 80px;
+    position: absolute;
+    margin-top: -6px;
+}
+ 
+.totalfoldercount {
+    font-family: pix;
+    font-size: 8px;
+    color: {color:post nav text};
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px solid rgba({RGBcolor:window border},0.1);
+    margin-top: 10px;
+}
+ 
+#postpop2, #postpop1, #postpop3, #postpop4, #postpop5, #postpop6, #postpop7, #postpop8, #postpop9, #postpop10, #postpop11, #postpop12, #postpop13, #postpop14, #postpop15 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: {color:background};
+    background-image: url({image:wallpaper});
+    {block:ifcoverwallpaper}background-size:cover;{/block:ifcoverwallpaper}
+    display: none;
+    overflow: auto;
+}
+ 
+.popuppost {
+    z-index: 2;
+    width: 500px;
+    position: relative;
+    padding: 20px;
+    background-color: rgba({RGBcolor:post background},0.1);
+    margin: 40px 0 20px 0;
+}
+ 
+.text {
+    font-family: bit;
+    font-size: 12px;
+    color: {color:body text};
+    text-align: left;
+}
+ 
+.text a, .qsrc a, .asker, #notescon a, #sticky1 a, #sticky2 a, #sticky3 a {
+    color: {color:body links};
+    text-decoration: underline;
+}
+ 
+.text a:hover, .qsrc a:hover, .asker:hover, #notescon a:hover, #sticky1 a:hover, #sticky2 a:hover, #sticky3 a:hover {
+    color: {color:body links hover};
+}
+ 
+.text b,strong, .qsrc b,strong {
+    color: {color:body bold};
+}
+ 
+.text i,em, .qsrc i,em {
+    color: {color:body italic};
+}
+ 
+.text blockquote {
+    border-left: 1px solid {color:blockquote};
+    margin: 5px;
+    padding: 0 20px;
+}
+ 
+.itags {
+    font-family: ebit;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: {color:body text};
+    margin: 14px 0 4px 0;
+    text-align: center;
+    width: 500px;
+    line-height: 24px;
+}
+ 
+.itags a {
+    color: {color:body text};
+    background-color: rgba({RGBcolor:post background},0.055);
+    padding: 4px 10px;
+    transition: 0.4s;
+    margin: 0 4px;
+}
+ 
+.itags a:hover {background-color: rgba({RGBcolor:post background},0.3);}
+ 
+.clopo {
+    font-size: 20px;
+    font-family: ebit;
+    color: #fff;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgba(0,0,0,0.4);
+}
+ 
+.permaactions {
+    margin-bottom: 160px;
+    width: 500px;
+    margin-left: 175px;
+}
+ 
+#perbtn:hover { color: #FAF193; border: 2px solid #FAF193; }
+#rbgbtn:hover { color: #90D494; border: 2px solid #90D494; }
+#likbtn:hover { color: #ED7E7E; border: 2px solid #ED7E7E; }
+#perbtn:hover .paction { color: #FAF193; }
+#rbgbtn:hover .paction { color: #90D494; }
+#likbtn:hover .paction { color: #ED7E7E; }
+ 
+.permact {
+    float: left;
+    margin: 0 10px;
+    padding: 4px 10px;
+    border: 2px solid {color:permalink actions};
+    color: {color:permalink actions};
+    font-family: ebit;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+ 
+.paction {
+    margin-right: 6px;
+    font-size: 12px;
+    color: {color:permalink actions};
+    line-height: 10px;
+}
+ 
+.permact a, .paction a { color: {color:permalink actions}; }
+ 
+.lkbtn {
+    float: left;
+    margin-right: 6px;
+    line-height: 10px;
+}
+ 
+.photo img { width: 100%; }
+ 
+.pquote {
+    font-family: ebit;
+    font-size: 16px;
+    color:{color:post title};
+}
+ 
+.qsrc {
+    font-family: pix;
+    font-size: 8px;
+    margin-top: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: {color:body text};
+    text-transform: uppercase;
+}
+ 
+.ptitle {
+    font-family: ebit;
+    font-size: 14px;
+    color:{color:post title};
+}
+ 
+.text ul {list-style-type: square;}
+ 
+.askerportrait {
+    max-width: 64px;
+    max-height: 64px;
+    float: left;
+}
+ 
+.a {
+    margin-left: 60px;
+    padding: 13px 10px;
+    background-color: rgba({RGBcolor:post background},0.1);
+    font-family: bit;
+    font-size: 10px;
+    min-height: 14px;
+    color: {color:body text};
+    text-align: left;
+    margin-bottom: 10px;
+}
+ 
+.askerm {font-style: italic;padding-right: 3px;}
+.asker { padding-left:3px; }
+.q {margin-top: 10px;}
+.asktri {
+    color: rgba({RGBcolor:post background},0.1);
+    font-size: 24px;
+    position: absolute;
+    margin: 2px 43px;
+    transition: 0.6s;
+}
+ 
+.line {
+    padding: 10px;
+    background-color: rgba({RGBcolor:post background},0.1);
+    margin-bottom: 6px;
+}
+ 
+.popperma {
+    font-family: ebit;
+    font-size: 12px;
+    color: {color:body text};
+    margin: 20px 0;
+    width: 500px;
+}
+ 
+.permapostinfo {
+    font-family: pix;
+    font-size: 8px;
+    color: {color:body text};
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+ 
+.permapostinfo a {color: {color:body links};}
+.permapostinfo a:hover {color: {color:body links hover};}
+ 
+.permapostinfo blockquote {
+    border-left: 1px solid {color:blockquote};
+    margin: 0 0 5px 15px;
+    padding: 0 0 0 10px;
+}
+ 
+#notescon {
+    width: 400px;
+    font-family: bit;
+    font-size: 10px;
+    color: {color:body text};
+    text-align: left;
+    margin-left: -40px;
+    margin-top: 10px;
+}
+ 
+.notes li {
+    width: 400px;
+    font-family: bit;
+    font-size: 10px;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    background-color: rgba({RGBcolor:post background},0.1);
+}
+ 
+.notes img {
+    margin-right: 10px;
+    float: left;
+    width: 13px;
+    height: 13px;
+}
+ 
+ol.notes {
+    width: 400px;
+    list-style-type: none;
+    padding: 10px 20px;
+    line-height: 15px;
+    position: absolute;
+}
+ 
+#contentright {
+    position: absolute;
+    margin-left: 161px;
+    padding: 0 35px;
+    height: 400px;
+    overflow: auto;
+    {block:permalinkpage}width:439px;{/block:permalinkpage}
+    {block:if2column250pxposts}
+    {block:indexpage}width: 624px;{/block:indexpage}
+    {block:permalinkpage}width:439px;{/block:permalinkpage}
+    {/block:if2column250pxposts}
+    {block:ifnot2column250pxposts}
+    width: 439px;
+    {/block:ifnot2column250pxposts}
+}
+ 
+.post {
+    background-color: rgba({RGBcolor:post background},0.1);
+    padding: 20px;
+    float: left;
+    {block:if2column250pxposts}
+    {block:indexpage}
+    width: 250px;
+    height: 250px;
+    margin: 0 10px 20px 10px;
+    {/block:indexpage}
+    {block:permalinkpage}width: 400px;{/block:permalinkpage}
+    {/block:if2column250pxposts}
+    {block:ifnot2column250pxposts}
+    width: 400px;
+    margin-bottom: 20px;
+    {/block:ifnot2column250pxposts}
+}
+ 
+.post img {
+    {block:if2column250pxposts}
+    {block:indexpage}
+    max-width: 250px;
+    {/block:indexpage}
+    {block:permalinkpage}max-width: 400px;{/block:permalinkpage}
+    {/block:if2column250pxposts}
+    {block:ifnot2column250pxposts}
+    max-width: 400px;
+    {/block:ifnot2column250pxposts}
+    height: auto;
+}
+ 
+.post blockquote img {max-width: 100%;}
+ 
+.postc {
+    {block:if2column250pxposts}
+    max-width: 250px;
+    max-height: 250px;
+    overflow: hidden;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    {/block:if2column250pxposts}
+}
+ 
+.postdesci {
+    font-family: pix;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: absolute;
+    float: right;
+    width: 250px;
+    text-align: right;
+    z-index: 2;
+    margin-top: 230px;
+    overflow: hidden;
+    {block:ifnot2column250pxposts}
+    display: none;
+    {/block:ifnot2column250pxposts}
+}
+ 
+.postdescicon {
+    width: 300px;
+    margin-left: -50px;
+    height: 20px;
+    line-height: 20px;
+}
+ 
+.postdesci a, .postdesu a {
+    color: {color:post desc};
+    background-color: rgba({RGBcolor:post desc bg},0.6);
+    padding: 8px 10px;
+}
+ 
+.postdesu {
+    font-family: pix;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 14px;
+}
+ 
+.audem .tumblr_audio_player {
+    {block:if2column250pxposts}
+    {block:indexpage}height:60px;width:250px;{/block:indexpage}
+    {/block:if2column250pxposts}
+    {block:ifnot2column250pxposts}
+    {block:indexpage}height:60px;width:400px;{/block:indexpage}
+    {/block:ifnot2column250pxposts}
+}
+.tumblr_audio_player {width: 500px;}
+ 
+.aline {
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    background-color: rgba({RGBcolor:post background},0.1);
+    color: {color:body text};
+    font-family: bit;
+    font-size: 12px;
+    overflow: hidden;
+}
+ 
+#opensticky, #closesticky1, #closesticky2, #closesticky3, #closepost1, #closepost2, #closepost3, #closepost4, #closepost5, #closepost6, #closepost7, #closepost8, #closepost9, #closepost10, #closepost11, #closepost12, #closepost13, #closepost14, #closepost5, #closesbimg1, #closesbimg2, #closesbimg3, #closesbimg4, #closesbimg5, #closeaskboxpop, #closearchivepop, #closecontentpop, #closeblogrollpop, #closeaboutpop, .taskbariconi, .shortcut {
+    cursor: pointer;
+    text-decoration: none;
+}
+ 
+ 
+{CustomCSS}    
+ 
+</style>
+</head>
+<body>
+ 
+<div id="contentpop">
+<div class="dragcontent"><div class="menubtncontent"><span class="mbt">_</span><span class="mbt">□</span><a id="closecontentpop">X</a></div>
+<div class="blogtcontent">> {text:url}'s documents</div></div>
+<div class="contentwrap"></div>
+ 
+<div id="contentright"><!--actual post content below!-->
+ 
+{block:Posts}
+<div class="post"><!-- actual posts ---------------------------------------->
+ 
+{block:if2column250pxposts}
+{block:indexpage}<div class="postdesci"><div class="postdescicon">
+{block:Post1}<a title="file size: {NoteCount} B" id="openpost1a">{/block:Post1}{block:Post2}<a title="file size: {NoteCount} B" id="openpost2a">{/block:Post2}{block:Post3}<a title="file size: {NoteCount} B" id="openpost3a">{/block:Post3}{block:Post4}<a title="file size: {NoteCount} B" id="openpost4a">{/block:Post4}{block:Post5}<a title="file size: {NoteCount} B" id="openpost5a">{/block:Post5}{block:Post6}<a title="file size: {NoteCount} B" id="openpost6a">{/block:Post6}{block:Post7}<a title="file size: {NoteCount} B" id="openpost7a">{/block:Post7}{block:Post8}<a title="file size: {NoteCount} B" id="openpost8a">{/block:Post8}{block:Post9}<a title="file size: {NoteCount} B" id="openpost9a">{/block:Post9}{block:Post10}<a title="file size: {NoteCount} B" id="openpost10a">{/block:Post10}{block:Post11}<a title="file size: {NoteCount} B" id="openpost11a">{/block:Post11}{block:Post12}<a title="file size: {NoteCount} B" id="openpost12a">{/block:Post12}{block:Post13}<a title="file size: {NoteCount} B" id="openpost13a">{/block:Post13}{block:Post14}<a title="file size: {NoteCount} B" id="openpost14a">{/block:Post14}{block:Post15}<a title="file size: {NoteCount} B" id="openpost15a">{/block:Post15}
+{Block:Text}<i class="fa fa-font"></i> {block:title}{title}{/block:title}.txt{/Block:Text}
+{block:photo}<i class="fa fa-image"></i> img_{DayOfMonthWithZero}{MonthNumberWithZero}{ShortYear}{24HourWithZero}{Minutes}.jpg{/block:photo}
+{block:photoset}<i class="fa fa-th-large"></i> photoset_{DayOfMonthWithZero}{MonthNumberWithZero}{ShortYear}{24HourWithZero}{Minutes}{/block:photoset}
+{block:video}<i class="fa fa-fast-forward"></i> vid_{DayOfMonthWithZero}{MonthNumberWithZero}{ShortYear}{24HourWithZero}{Minutes}.mp4{/block:video}
+{block:link}<i class="fa fa-link"></i> {Name}{/block:link}
+{Block:Audio}<i class="fa fa-music"></i> {block:TrackName}{TrackName}{/block:TrackName}.mp3{/Block:Audio}
+{block:chat}<i class="fa fa-comment-o"></i> chat_log_{DayOfMonthWithZero}{MonthNumberWithZero}{ShortYear}{/block:chat}
+{block:quote}<i class="fa fa-quote-left"></i> quote.txt{/block:quote}
+{Block:Answer}<i class="fa fa-envelope-o"></i> mail received on {DayOfMonthWithZero}/{MonthNumberWithZero}/{ShortYear}{/Block:Answer}
+</a></div></div>{/block:indexpage}
+{/block:if2column250pxposts}
+ 
+{block:indexpage}<div class="postc">{/block:indexpage}
+ 
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}{/block:Quote}
+ 
+{Block:Text}
+{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>
+{/block:Text}
+ 
+{Block:Photo}
+{block:indexpage}
+{block:if2column250pxposts}<img src="{PhotoURL-250}">{/block:if2column250pxposts}{block:ifnot2column250pxposts}<img src="{PhotoURL-400}">{/block:ifnot2column250pxposts}
+{/block:indexpage}
+{block:permalinkpage}<img src="{PhotoURL-400}">{/block:permalinkpage}
+{block:if2column250pxposts}
+{block:permalinkpage}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:permalinkpage}
+{/block:if2column250pxposts}
+{block:ifnot2column250pxposts}
+{block:Caption}<div class="text">{Caption}</div>{/block:Caption}
+{/block:ifnot2column250pxposts}
+{/block:Photo}
+ 
+{block:Photoset}
+{block:indexpage}
+{block:if2column250pxposts}{Photoset-250}{/block:if2column250pxposts}
+{block:ifnot2column250pxposts}{Photoset-400}{/block:ifnot2column250pxposts}
+{/block:indexpage}
+{block:permalinkpage}{Photoset-400}{/block:permalinkpage}
+{block:if2column250pxposts}
+{block:permalinkpage}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:permalinkpage}
+{/block:if2column250pxposts}
+{block:ifnot2column250pxposts}
+{block:Caption}<div class="text">{Caption}</div>{/block:Caption}
+{/block:ifnot2column250pxposts}
+{/block:Photoset}
+ 
+{Block:Audio}{block:AudioEmbed}<div class="audem">{AudioEmbed}</div>{/block:AudioEmbed}{Block:indexpage}{Block:TrackName}<div class="aline">Track: {TrackName}</div>{/block:TrackName}{Block:Album}<div class="aline">Album: {Album}</div>{/block:Album}{Block:Artist}<div class="aline">Artist: {Artist}</div>{/block:Artist}{/block:indexpage}
+{block:if2column250pxposts}
+{block:permalinkpage}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:permalinkpage}
+{/block:if2column250pxposts}
+{block:ifnot2column250pxposts}
+{block:Caption}<div class="text">{Caption}</div>{/block:Caption}
+{/block:ifnot2column250pxposts}
+{/Block:Audio}
+ 
+{block:Video}
+{block:indexpage}
+{block:if2column250pxposts}{Video-250}{/block:if2column250pxposts}
+{block:ifnot2column250pxposts}{Video-400}{/block:ifnot2column250pxposts}
+{/block:indexpage}
+{block:permalinkpage}{Video-400}{/block:permalinkpage}
+{block:if2column250pxposts}
+{block:permalinkpage}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:permalinkpage}
+{/block:if2column250pxposts}
+{block:ifnot2column250pxposts}
+{block:Caption}<div class="text">{Caption}</div>{/block:Caption}
+{/block:ifnot2column250pxposts}
+{/block:Video}
+ 
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>
+{/block:Answer}
+ 
+{Block:Link}
+<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}
+{/block:Link}
+ 
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>
+{/block:Chat}
+ 
+{block:indexpage}</div><!--postc-->{/block:indexpage}
+ 
+{block:ifnot2column250pxposts}
+{block:indexpage}<div class="postdesu">
+{block:Post1}<a title="file size: {NoteCount} B" id="openpost1a">{/block:Post1}{block:Post2}<a title="file size: {NoteCount} B" id="openpost2a">{/block:Post2}{block:Post3}<a title="file size: {NoteCount} B" id="openpost3a">{/block:Post3}{block:Post4}<a title="file size: {NoteCount} B" id="openpost4a">{/block:Post4}{block:Post5}<a title="file size: {NoteCount} B" id="openpost5a">{/block:Post5}{block:Post6}<a title="file size: {NoteCount} B" id="openpost6a">{/block:Post6}{block:Post7}<a title="file size: {NoteCount} B" id="openpost7a">{/block:Post7}{block:Post8}<a title="file size: {NoteCount} B" id="openpost8a">{/block:Post8}{block:Post9}<a title="file size: {NoteCount} B" id="openpost9a">{/block:Post9}{block:Post10}<a title="file size: {NoteCount} B" id="openpost10a">{/block:Post10}{block:Post11}<a title="file size: {NoteCount} B" id="openpost11a">{/block:Post11}{block:Post12}<a title="file size: {NoteCount} B" id="openpost12a">{/block:Post12}{block:Post13}<a title="file size: {NoteCount} B" id="openpost13a">{/block:Post13}{block:Post14}<a title="file size: {NoteCount} B" id="openpost14a">{/block:Post14}{block:Post15}<a title="file size: {NoteCount} B" id="openpost15a">{/block:Post15}
+{Block:Text}<i class="fa fa-font"></i> {block:title}{title}{/block:title}.txt{/Block:Text}
+{block:photo}<i class="fa fa-image"></i> img_{DayOfMonthWithZero}{MonthNumberWithZero}{ShortYear}{24HourWithZero}{Minutes}.jpg{/block:photo}
+{block:photoset}<i class="fa fa-th-large"></i> photoset_{DayOfMonthWithZero}{MonthNumberWithZero}{ShortYear}{24HourWithZero}{Minutes}{/block:photoset}
+{block:video}<i class="fa fa-fast-forward"></i> vid_{DayOfMonthWithZero}{MonthNumberWithZero}{ShortYear}{24HourWithZero}{Minutes}.mp4{/block:video}
+{block:link}<i class="fa fa-link"></i> {Name}{/block:link}
+{Block:Audio}<i class="fa fa-music"></i> {block:TrackName}{TrackName}{/block:TrackName}.mp3{/Block:Audio}
+{block:chat}<i class="fa fa-comment-o"></i> chat_log_{DayOfMonthWithZero}{MonthNumberWithZero}{ShortYear}{/block:chat}
+{block:quote}<i class="fa fa-quote-left"></i> quote.txt{/block:quote}
+{Block:Answer}<i class="fa fa-envelope-o"></i> mail received on {DayOfMonthWithZero}/{MonthNumberWithZero}/{ShortYear}{/Block:Answer}
+</a></div>{/block:indexpage}
+{/block:ifnot2column250pxposts}
+ 
+{block:permalinkpage}
+{block:PostNotes}
+<div id="notescon">{PostNotes-16}</div>
+{/block:PostNotes}
+{/block:permalinkpage}
+ 
+</div><!--post-->
+{/block:Posts}
+ 
+</div><!--contentright-->
+ 
+<div class="contentleft">
+ 
+<!--permalinkpage folders-->
+ 
+{block:permalinkpage}
+{block:Posts}
+{Block:Text}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-font"></i></div> {block:title}{title}{/block:title}.txt</div></div><!--postnav-->{/Block:Text}
+{block:photo}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-image"></i></div> img_{DayOfMonthWithZero}{MonthNumberWithZero}{ShortYear}{24HourWithZero}{Minutes}.jpg</div></div><!--postnav-->{/block:photo}
+{block:photoset}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-th-large"></i></div> photoset_{DayOfMonthWithZero}{MonthNumberWithZero}{ShortYear}{24HourWithZero}{Minutes}</div></div><!--postnav-->{/block:photoset}
+{block:video}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-fast-forward"></i></div> vid_{DayOfMonthWithZero}{MonthNumberWithZero}{ShortYear}{24HourWithZero}{Minutes}.mp4</div></div><!--postnav-->{/block:video}
+{block:link}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-link"></i></div> {Name}</div></div><!--postnav-->{/block:link}
+{Block:Audio}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-music"></i></div> {block:TrackName}{TrackName}{/block:TrackName}.mp3</div></div><!--postnav-->{/Block:Audio}
+{block:chat}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-comment-o"></i></div> chat_log_{DayOfMonthWithZero}{MonthNumberWithZero}{ShortYear}</div></div><!--postnav-->{/block:chat}
+{block:quote}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-quote-left"></i></div> {Quote}.txt</div></div><!--postnav-->{/block:quote}
+{Block:Answer}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-envelope-o"></i></div> mail received on {DayOfMonthWithZero}/{MonthNumberWithZero}/{ShortYear}</div></div><!--postnav-->{/Block:Answer}
+{block:permalinkpage}<div class="permapostinfo">
+{block:date}
+<blockquote>
+posted: {DayOfMonth} {Month} {Year}<br>
+notes: {NoteCount}
+</blockquote>
+{block:RebloggedFrom}
+<blockquote>
+via <a href="{ReblogParentURL}">{ReblogParentName}</a>
+<br>originally <a href="{ReblogRootURL}">{ReblogRootName}</a>
+</blockquote>
+{/block:RebloggedFrom}
+{Block:HasTags}
+<blockquote>
+{block:Tags}<a href="{TagURL}">#{Tag}</a> {/block:Tags}
+</blockquote>
+{/Block:HasTags}
+</blockquote>
+{/block:date}
+<br><a href="/"><i class="fa fa-angle-double-left"></i> back to main</a>
+</div><!--permapostinfo-->{/block:permalinkpage}
+</a><!-- openpost x end link -->
+{/block:Posts}
+{/block:permalinkpage}
+ 
+<!--end permalinkpage folders-->
+ 
+ 
+{block:Pagination}<div class="folders">
+{block:JumpPagination length="5"}
+{block:CurrentPage}
+<div class="currentfolder"><span style="margin-right:6px;"><i class="fa fa-caret-down"></i></span> folder {CurrentPage}<div class="folderbline"></div></div>
+{block:Posts}
+{block:Post1}<a title="file size: {NoteCount} B" id="openpost1">{/block:Post1}{block:Post2}<a title="file size: {NoteCount} B" id="openpost2">{/block:Post2}{block:Post3}<a title="file size: {NoteCount} B" id="openpost3">{/block:Post3}{block:Post4}<a title="file size: {NoteCount} B" id="openpost4">{/block:Post4}{block:Post5}<a title="file size: {NoteCount} B" id="openpost5">{/block:Post5}{block:Post6}<a title="file size: {NoteCount} B" id="openpost6">{/block:Post6}{block:Post7}<a title="file size: {NoteCount} B" id="openpost7">{/block:Post7}{block:Post8}<a title="file size: {NoteCount} B" id="openpost8">{/block:Post8}{block:Post9}<a title="file size: {NoteCount} B" id="openpost9">{/block:Post9}{block:Post10}<a title="file size: {NoteCount} B" id="openpost10">{/block:Post10}{block:Post11}<a title="file size: {NoteCount} B" id="openpost11">{/block:Post11}{block:Post12}<a title="file size: {NoteCount} B" id="openpost12">{/block:Post12}{block:Post13}<a title="file size: {NoteCount} B" id="openpost13">{/block:Post13}{block:Post14}<a title="file size: {NoteCount} B" id="openpost14">{/block:Post14}{block:Post15}<a title="file size: {NoteCount} B" id="openpost15">{/block:Post15}
+{Block:Text}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-font"></i></div> {block:title}{title}{/block:title}.txt</div></div><!--postnav-->{/Block:Text}
+{block:photo}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-image"></i></div> img_{DayOfMonthWithZero}{MonthNumberWithZero}{ShortYear}{24HourWithZero}{Minutes}.jpg</div></div><!--postnav-->{/block:photo}
+{block:photoset}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-th-large"></i></div> photoset_{DayOfMonthWithZero}{MonthNumberWithZero}{ShortYear}{24HourWithZero}{Minutes}</div></div><!--postnav-->{/block:photoset}
+{block:video}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-fast-forward"></i></div> vid_{DayOfMonthWithZero}{MonthNumberWithZero}{ShortYear}{24HourWithZero}{Minutes}.mp4</div></div><!--postnav-->{/block:video}
+{block:link}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-link"></i></div> {Name}</div></div><!--postnav-->{/block:link}
+{Block:Audio}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-music"></i></div> {block:TrackName}{TrackName}{/block:TrackName}.mp3</div></div><!--postnav-->{/Block:Audio}
+{block:chat}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-comment-o"></i></div> chat_log_{DayOfMonthWithZero}{MonthNumberWithZero}{ShortYear}</div></div><!--postnav-->{/block:chat}
+{block:quote}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-quote-left"></i></div> {Quote}.txt</div></div><!--postnav-->{/block:quote}
+{Block:Answer}<div class="postnav"><div class="pnex"><div class="posticon"><i class="fa fa-envelope-o"></i></div> mail received on {DayOfMonthWithZero}/{MonthNumberWithZero}/{ShortYear}</div></div><!--postnav-->{/Block:Answer}
+{block:date}{block:permalinkpage}<div class="permapostinfo">
+<blockquote>
+posted: {DayOfMonth} {Month} {Year}<br>
+notes: {NoteCount}
+</blockquote>
+{block:RebloggedFrom}
+<blockquote>
+via <a href="{ReblogParentURL}">{ReblogParentName}</a>
+<br>originally <a href="{ReblogRootURL}">{ReblogRootName}</a>
+</blockquote>
+{/block:RebloggedFrom}
+{Block:HasTags}
+<blockquote>
+{block:Tags}<a href="{TagURL}">#{Tag}</a> {/block:Tags}
+</blockquote>
+{/Block:HasTags}
+</blockquote>
+<br><a href="/"><i class="fa fa-angle-double-left"></i> back to main</a>
+</div><!--permapostinfo-->{/block:permalinkpage}{/block:date}
+</a><!-- openpost x end link -->
+{/block:Posts}
+<div style="height:10px;"></div>
+{/block:CurrentPage}
+{block:JumpPage}
+<a class="jump_page" href="{URL}"><div class="inactivefolder"><span style="margin-right:6px;"><i class="fa fa-caret-right"></i></span> folder {PageNumber}</div></a>
+{/block:JumpPage}
+{/block:JumpPagination}
+<div class="totalfoldercount">total {TotalPages} folders</div>
+</div><!--folders-->{/block:Pagination}
+ 
+</div><!--contentleft-->
+ 
+ 
+</div><!-- contentpop -->
+ 
+{block:ifstickynote1text}<div id="sticky1">
+<div class="dragsticky1"><div class="menubtnsticky1"><a id="closesticky1">X</a></div>
+<div class="stickyt1">> sticky note 1</div></div>
+{text:sticky note 1 text}
+</div><!-- end sticky note 1 -->{/block:ifstickynote1text}
+ 
+{block:ifstickynote2text}<div id="sticky2">
+<div class="dragsticky2"><div class="menubtnsticky2"><a id="closesticky2">X</a></div>
+<div class="stickyt2">> sticky note 2</div></div>
+{text:sticky note 2 text}
+</div><!-- end sticky note 2 -->{/block:ifstickynote2text}
+ 
+{block:ifstickynote3text}<div id="sticky3">
+<div class="dragsticky3"><div class="menubtnsticky3"><a id="closesticky3">X</a></div>
+<div class="stickyt3">> sticky note 3</div></div>
+{text:sticky note 3 text}
+</div><!-- end sticky note 3 -->{/block:ifstickynote3text}
+ 
+{block:Following}<div id="blogrollpop">
+<div class="dragblogroll"><div class="menubtnblogroll"><span class="mbt">_</span><span class="mbt">□</span><a id="closeblogrollpop">X</a></div>
+<div class="blogtblogroll">> contacts</div></div><!--dragblogroll-->
+<div id="blogrollwrap"></div><!--blogrollwrap-->
+<div id="blogrollt">
+{block:Followed}<a href="{FollowedURL}"><div class="followingu">
+<img class="foimg" src="{FollowedPortraitURL-48}">
+<div class="senpai"><div class="senpie"><span style="font-size: 15px;"><i class="fa fa-angle-double-right"></i></span> {FollowedName}<br><div class="kouhai">{FollowedTitle}</div></div></div>
+</div><!--followingu--></a>{/block:Followed}
+</div><!--blogrollt-->
+</div><!--archivepop-->{/block:Following}
+ 
+<div id="aboutpop">
+<div class="dragabout"><div class="menubtnabout"><span class="mbt">_</span><span class="mbt">□</span><a id="closeaboutpop">X</a></div>
+<div class="blogtabout">> user information</div></div><!--dragabout-->
+<div class="leftabout">
+<div class="labimgs"><img class="labimg" src="{image:about icon}"></div>
+<div class="aboutinfo">
+<b>name</b> {text:name}</p>
+<p><b>birthday</b> {text:birthday}</p>
+<p><b>location</b> {text:country}</p>
+<p><b>mbti</b> {text:personality}</p>
+<p><b>status</b> {text:status}</p>
+</div><!--aboutinfo-->
+</div><!--leftabout-->
+<div class="rightabout"><div class="desc">{description}</div></div>
+<div id="aboutwrap"></div><!--aboutwrap-->
+</div><!--aboutpop-->
+ 
+<div id="archivepop">
+<div class="dragarchive"><div class="menubtnarchive"><span class="mbt">_</span><span class="mbt">□</span><a id="closearchivepop">X</a></div>
+<div class="blogtarchive">> archives</div></div><!--dragarchive-->
+<iframe src="http://{text:url}.tumblr.com/archive" width="580" height="400"></iframe>
+</div><!--archivepop-->
+ 
+<div id="askboxpop">
+<div class="dragaskbox"><div class="menubtnaskbox"><span class="mbt">_</span><span class="mbt">□</span><a id="closeaskboxpop">X</a></div>
+<div class="blogtaskbox">> send a message</div></div><!--dragaskbox-->
+<iframe frameborder="0" scrolling="no" width="100%" height="200" src="http://www.tumblr.com/ask_form/{text:url}.tumblr.com" style="background-color:transparent; overflow:hidden;" id="ask_form"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('ask_form').allowTransparency=true;</script><![endif]-->
+</div><!--askboxpop-->
+ 
+<div id="sbimg1">
+<div class="dragimg1"><div class="menubtn1"><span class="mbt">_</span><span class="mbt">□</span><a id="closesbimg1">X</a></div>
+<div class="blogt1">> {text:photo upload 1 title}</div></div><!--drag1-->
+<img class="sbimg1" src="{image:photo upload 1}">
+</div><!--sbimg1-->
+<div id="sbimg2">
+<div class="dragimg2"><div class="menubtn2"><span class="mbt">_</span><span class="mbt">□</span><a id="closesbimg2">X</a></div>
+<div class="blogt2">> {text:photo upload 2 title}</div></div><!--drag2-->
+<img class="sbimg2" src="{image:photo upload 2}">
+</div><!--sbimg2-->
+<div id="sbimg3">
+<div class="dragimg3"><div class="menubtn3"><span class="mbt">_</span><span class="mbt">□</span><a id="closesbimg3">X</a></div>
+<div class="blogt3">> {text:photo upload 3 title}</div></div><!--drag3-->
+<img class="sbimg3" src="{image:photo upload 3}">
+</div><!--sbimg3-->
+<div id="sbimg4">
+<div class="dragimg4"><div class="menubtn4"><span class="mbt">_</span><span class="mbt">□</span><a id="closesbimg4">X</a></div>
+<div class="blogt4">> {text:photo upload 4 title}</div></div><!--drag4-->
+<img class="sbimg4" src="{image:photo upload 4}">
+</div><!--sbimg4-->
+<div id="sbimg5">
+<div class="dragimg5"><div class="menubtn5"><span class="mbt">_</span><span class="mbt">□</span><a id="closesbimg5">X</a></div>
+<div class="blogt5">> {text:photo upload 5 title}</div></div><!--drag5-->
+<img class="sbimg5" src="{image:photo upload 5}">
+</div><!--sbimg5-->
+ 
+<div id="desktop3"><!------------------------------------- start desktop 3 -->
+ 
+{block:ifphotoupload1title}<div class="shortcut"><!-- sb image 1 -->
+<div class="scn">
+<div class="shortcuticon"><a id="opensbimg1"><img class="smolsbimg" src="{image:photo upload 1}"></a></div>
+<div class="shortcutname"><a id="opensbimg1"><span class="scnbg">{text:photo upload 1 title}</span></a></div>
+</div>
+</div><!--shortcut-->{/block:ifphotoupload1title}
+ 
+{block:ifphotoupload2title}<div class="shortcut"><!-- sb image 2 -->
+<div class="scn">
+<div class="shortcuticon"><a id="opensbimg2"><img class="smolsbimg" src="{image:photo upload 2}"></a></div>
+<div class="shortcutname"><a id="opensbimg2"><span class="scnbg">{text:photo upload 2 title}</span></a></div>
+</div>
+</div><!--shortcut-->{/block:ifphotoupload2title}
+ 
+{block:ifphotoupload3title}<div class="shortcut"><!-- sb image 3 -->
+<div class="scn">
+<div class="shortcuticon"><a id="opensbimg3"><img class="smolsbimg" src="{image:photo upload 3}"></a></div>
+<div class="shortcutname"><a id="opensbimg3"><span class="scnbg">{text:photo upload 3 title}</span></a></div>
+</div>
+</div><!--shortcut-->{/block:ifphotoupload3title}
+ 
+{block:ifphotoupload4title}<div class="shortcut"><!-- sb image 4 -->
+<div class="scn">
+<div class="shortcuticon"><a id="opensbimg4"><img class="smolsbimg" src="{image:photo upload 4}"></a></div>
+<div class="shortcutname"><a id="opensbimg4"><span class="scnbg">{text:photo upload 4 title}</span></a></div>
+</div>
+</div><!--shortcut-->{/block:ifphotoupload4title}
+ 
+{block:ifphotoupload5title}<div class="shortcut"><!-- sb image 5 -->
+<div class="scn">
+<div class="shortcuticon"><a id="opensbimg5"><img class="smolsbimg" src="{image:photo upload 5}"></a></div>
+<div class="shortcutname"><a id="opensbimg5"><span class="scnbg">{text:photo upload 5 title}</span></a></div>
+</div>
+</div><!--shortcut-->{/block:ifphotoupload5title}
+ 
+</div><!----------------------------------------------------------desktop3-->
+ 
+<div id="desktop2"><!------------------------------------ start desktop 2 -->
+ 
+{block:iflink1}<div class="shortcut">
+<div class="scn">
+<div class="shortcuticon"><a href="{text:link 1 url}"><i class="fa fa-{text:link 1 icon}"></i></a></div>
+<a href="{text:link 1 url}"><div class="shortcutname"><span class="scnbg">{text:link 1}</span></div></a>
+</div>
+</div><!--shortcut-->{/block:iflink1}
+ 
+{block:iflink2}<div class="shortcut">
+<div class="scn">
+<div class="shortcuticon"><a href="{text:link 2 url}"><i class="fa fa-{text:link 2 icon}"></i></a></div>
+<a href="{text:link 2 url}"><div class="shortcutname"><span class="scnbg">{text:link 2}</span></div></a>
+</div>
+</div><!--shortcut-->{/block:iflink2}
+ 
+{block:iflink3}<div class="shortcut">
+<div class="scn">
+<div class="shortcuticon"><a href="{text:link 3 url}"><i class="fa fa-{text:link 3 icon}"></i></a></div>
+<a href="{text:link 3 url}"><div class="shortcutname"><span class="scnbg">{text:link 3}</span></div></a>
+</div>
+</div><!--shortcut-->{/block:iflink3}
+ 
+{block:iflink4}<div class="shortcut">
+<div class="scn">
+<div class="shortcuticon"><a href="{text:link 4 url}"><i class="fa fa-{text:link 4 icon}"></i></a></div>
+<a href="{text:link 4 url}"><div class="shortcutname"><span class="scnbg">{text:link 4}</span></div></a>
+</div>
+</div><!--shortcut-->{/block:iflink4}
+ 
+{block:iflink5}<div class="shortcut">
+<div class="scn">
+<div class="shortcuticon"><a href="{text:link 5 url}"><i class="fa fa-{text:link 5 icon}"></i></a></div>
+<a href="{text:link 5 url}"><div class="shortcutname"><span class="scnbg">{text:link 5}</span></div></a>
+</div>
+</div><!--shortcut-->{/block:iflink5}
+ 
+{block:iflink6}<div class="shortcut">
+<div class="scn">
+<div class="shortcuticon"><a href="{text:link 6 url}"><i class="fa fa-{text:link 6 icon}"></i></a></div>
+<a href="{text:link 6 url}"><div class="shortcutname"><span class="scnbg">{text:link 6}</span></div></a>
+</div>
+</div><!--shortcut-->{/block:iflink6}
+ 
+</div><!------------------------------------------------------end desktop2-->
+ 
+<div id="desktop"><!------------------------------------- start desktop 1 -->
+ 
+<div class="shortcut"><!--archive - trash bin icon -->
+<div class="scn">
+<div class="shortcuticon"><a id="openarchivepop"><i class="fa fa-trash-o"></i></a></div>
+<a id="openarchivepop"><div class="shortcutname"><span class="scnbg">archives</span></div></a>
+</div>
+</div><!--shortcut-->
+ 
+<div class="shortcut"><!-- blog posts - open folder icon -->
+<div class="scn">
+<div class="shortcuticon"><a id="opencontentpop"><i class="fa fa-folder-open-o"></i></a></div>
+<a id="opencontentpop"><div class="shortcutname"><span class="scnbg">documents</span></div></a>
+</div>
+</div><!--shortcut-->
+ 
+<div class="shortcut"><!-- about -- user icon -->
+<div class="scn">
+<div class="shortcuticon"><a id="openaboutpop"><i class="fa fa-user"></i></a></div>
+<a id="openaboutpop"><div class="shortcutname"><span class="scnbg">user info</span></div></a>
+</div>
+</div><!--shortcut-->
+ 
+<div class="shortcut"><!-- askbox -- envelope icon -->
+<div class="scn">
+<div class="shortcuticon"><a id="openaskboxpop"><i class="fa fa-envelope-o"></i></a></div>
+<a href="openaskboxpop"><div class="shortcutname"><span class="scnbg">check mail</span></div></a>
+</div>
+</div><!--shortcut-->
+ 
+{block:following}<div class="shortcut"><!--blogroll - book icon -->
+<div class="scn">
+<div class="shortcuticon"><a id="openblogrollpop"><i class="fa fa-book"></i></a></div>
+<a id="openblogrollpop"><div class="shortcutname"><span class="scnbg">contacts</span></div></a>
+</div>
+</div><!--shortcut-->{/block:following}
+ 
+<div class="shortcut">
+<div class="scn">
+<div class="shortcuticon"><a href="http://yukoki.tumblr.com"><i class="fa fa-code"></i></a></div>
+<a href="http://yukoki.tumblr.com"><div class="shortcutname"><span class="scnbg">theme credit</span></div></a>
+</div>
+</div><!--shortcut-->
+ 
+</div><!------------------------------------------------------end desktop1-->
+ 
+<div id="taskbar"><!-------------------------------------- start taskbar -->
+ 
+<div id="system">
+<div class="systempopup">
+<a href="http://tumblr.com"><div class="syslink">dashboard</div></a>
+<a href="http://tumblr.com/follow/{text:url}"><div class="syslink">follow {text:url}</div></a>
+<a href="/"><div class="syslink">restart system</div></a>
+<a href="http://tumblr.com/logout"><div class="syslink">log out</div></a>
+<div class="sputri">▼</div>
+</div><!--systempopup-->
+<div class="taskbariconi"><i class="fa fa-power-off"></i></div>
+</div><!--system-->
+ 
+<div id="task">
+<a title="send a message" href="/ask"><div class="taskbaricon"><i class="fa fa-inbox"></i></div></a>
+</div><!--task-->
+ 
+<div id="task">
+<a title="submit" href="/submit"><div class="taskbaricon"><i class="fa fa-upload"></i></div></a>
+</div><!--task-->
+ 
+<div id="task">
+<a title="access history" href=""><div class="taskbaricon"><i class="fa fa-calendar"></i></div></a>
+</div><!--task-->
+ 
+{block:iflink1}<div id="task">
+<a title="{text:link 1}" href="{text:link 1 url}"><div class="taskbaricon"><i class="fa fa-{text:link 1 icon}"></i></div></a>
+</div><!--task-->{/block:iflink1}
+ 
+{block:iflink2}<div id="task">
+<a title="{text:link 2}" href="{text:link 2 url}"><div class="taskbaricon"><i class="fa fa-{text:link 2 icon}"></i></div></a>
+</div><!--task-->{/block:iflink2}
+ 
+{block:iflink3}<div id="task">
+<a title="{text:link 3}" href="{text:link 3 url}"><div class="taskbaricon"><i class="fa fa-{text:link 3 icon}"></i></div></a>
+</div><!--task-->{/block:iflink3}
+ 
+{block:iflink4}<div id="task">
+<a title="{text:link 4}" href="{text:link 4 url}"><div class="taskbaricon"><i class="fa fa-{text:link 4 icon}"></i></div></a>
+</div><!--task-->{/block:iflink4}
+ 
+{block:iflink5}<div id="task">
+<a title="{text:link 5}" href="{text:link 5 url}"><div class="taskbaricon"><i class="fa fa-{text:link 5 icon}"></i></div></a>
+</div><!--task-->{/block:iflink5}
+ 
+{block:iflink6}<div id="task">
+<a title="{text:link 6}" href="{text:link 6 url}"><div class="taskbaricon"><i class="fa fa-{text:link 6 icon}"></i></div></a>
+</div><!--task-->{/block:iflink6}
+ 
+ 
+ 
+<div id="task">
+<a title="sticky notes" id="opensticky"><div class="taskbaricon"><i class="fa fa-sticky-note-o"></i></div></a>
+</div><!--task-->
+ 
+<div id="taskbarright">
+{block:ifbuiltinmusicplayer}
+<span class="bimh"><div class="bimptri">▼</div><div class="bimp"><div class="muse">{text:billy music player code}</div></div>
+{/block:ifbuiltinmusicplayer}
+<div class="tbvolume">
+<script language="JavaScript">
+/*
+Random Image Script- By JavaScript Kit (http://www.javascriptkit.com)
+Over 400+ free JavaScripts here!
+Keep this notice intact please
+*/
+function random_imglink(){
+var tbvol=new Array()
+ 
+tbvol[1]="up"
+tbvol[2]="down"
+{block:ifnotbuiltinmusicplayer}tbvol[3]="off"{/block:ifnotbuiltinmusicplayer}
+ 
+var ry=Math.floor(Math.random()*tbvol.length)
+if (ry==0)
+ry=1
+document.write('<i class="fa fa-volume-'+tbvol[ry]+' "></i>')
+}
+random_imglink()
+//-->
+</script>
+</div><!--tbvolume--></span>
+<div class="tbbattery">
+<script language="JavaScript">
+/*
+Random Image Script- By JavaScript Kit (http://www.javascriptkit.com)
+Over 400+ free JavaScripts here!
+Keep this notice intact please
+*/
+ 
+function random_imglink(){
+var battno=new Array()
+ 
+battno[1]="quarter"
+battno[2]="half"
+battno[3]="three-quarters"
+battno[4]="full"
+ 
+var ry=Math.floor(Math.random()*battno.length)
+if (ry==0)
+ry=1
+document.write('<i class="fa fa-battery-'+battno[ry]+' "></i>')
+}
+random_imglink()
+//-->
+</script>
+</div><!--tbbattery-->
+<div id="clockbox"></div>
+</div><!--taskbarright-->
+ 
+</div><!----------------------------------------------------- end taskbar -->
+ 
+{block:ContentSource}
+<!-- {SourceURL}{block:SourceLogo}<img src="{BlackLogoURL}"
+width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+{/block:SourceLogo}
+{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo} -->
+{/block:ContentSource}
+ 
+<!--{block:NoRebloggedFrom}{block:RebloggedFrom}{ReblogParentName}{/block:RebloggedFrom}{/block:NoRebloggedFrom}-->  
+ 
+<div id="postpop1"><a id="closepost1"><div class="clopo">X</div></a><center>
+{block:Posts}{Block:Post1}
+<div class="popuppost">
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}{/block:Quote}
+{Block:Text}{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>{/block:Text}
+{Block:Photo}<img src="{PhotoURL-500}">{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photo}
+{block:Photoset}<div class="photo">{Photoset-500}</div>{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photoset}
+{Block:Audio}{Block:AudioEmbed}{AudioEmbed-500}{/Block:AudioEmbed}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/Block:Audio}
+{block:Video}{Video-500}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Video}
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>{/block:Answer}
+{Block:Link}<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}{/block:Link}
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>{/block:Chat}
+</div><!--popuppost-->
+<div class="popperma">Posted {timeago} with {NoteCountWithLabel}.
+{Block:HasTags}<div class="itags">{block:Tags}<a href="{TagURL}"><span class="fa fa-tag"></span> {Tag}</a>{/block:Tags}</div>{/Block:HasTags}
+</div><!--popperma-->
+<div class="permaactions">
+<a href="{Permalink}"><div class="permact" id="perbtn"><span class="paction"><i class="fa fa-external-link"></i></span>permalink</div></a>
+<a href="{ReblogURL}"><div class="permact" id="rbgbtn"><span class="paction"><i class="fa fa-retweet"></i></span>reblog</div></a>
+<a title="click the heart to like this post!"><div class="permact" id="likbtn"><span class="lkbtn">{LikeButton size="13"}</span> Like</div></a>
+</div>
+{/Block:Post1}{/block:Posts}</center></div><!--postpop1-->
+ 
+ 
+<div id="postpop2"><a id="closepost2"><div class="clopo">X</div></a><center>
+{block:Posts}{Block:Post2}
+<div class="popuppost">
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}{/block:Quote}
+{Block:Text}{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>{/block:Text}
+{Block:Photo}<img src="{PhotoURL-500}">{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photo}
+{block:Photoset}<div class="photo">{Photoset-500}</div>{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photoset}
+{Block:Audio}{Block:AudioEmbed}{AudioEmbed-500}{/Block:AudioEmbed}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/Block:Audio}
+{block:Video}{Video-500}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Video}
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>{/block:Answer}
+{Block:Link}<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}{/block:Link}
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>{/block:Chat}
+</div><!--popuppost-->
+<div class="popperma">Posted {timeago} with {NoteCountWithLabel}.
+{Block:HasTags}<div class="itags">{block:Tags}<a href="{TagURL}"><span class="fa fa-tag"></span> {Tag}</a>{/block:Tags}</div>{/Block:HasTags}
+</div><!--popperma-->
+<div class="permaactions">
+<a href="{Permalink}"><div class="permact" id="perbtn"><span class="paction"><i class="fa fa-external-link"></i></span>permalink</div></a>
+<a href="{ReblogURL}"><div class="permact" id="rbgbtn"><span class="paction"><i class="fa fa-retweet"></i></span>reblog</div></a>
+<a title="click the heart to like this post!"><div class="permact" id="likbtn"><span class="lkbtn">{LikeButton size="13"}</span> Like</div></a>
+</div>
+{/Block:Post2}{/block:Posts}</center></div><!--postpop2-->
+ 
+ 
+<div id="postpop3"><a id="closepost3"><div class="clopo">X</div></a><center>
+{block:Posts}{Block:Post3}
+<div class="popuppost">
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}>{/block:Quote}
+{Block:Text}{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>{/block:Text}
+{Block:Photo}<img src="{PhotoURL-500}">{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photo}
+{block:Photoset}<div class="photo">{Photoset-500}</div>{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photoset}
+{Block:Audio}{Block:AudioEmbed}{AudioEmbed-500}{/Block:AudioEmbed}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/Block:Audio}
+{block:Video}{Video-500}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Video}
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>{/block:Answer}
+{Block:Link}<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}{/block:Link}
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>{/block:Chat}
+</div><!--popuppost-->
+<div class="popperma">Posted {timeago} with {NoteCountWithLabel}.
+{Block:HasTags}<div class="itags">{block:Tags}<a href="{TagURL}"><span class="fa fa-tag"></span> {Tag}</a>{/block:Tags}</div>{/Block:HasTags}
+</div><!--popperma-->
+<div class="permaactions">
+<a href="{Permalink}"><div class="permact" id="perbtn"><span class="paction"><i class="fa fa-external-link"></i></span>permalink</div></a>
+<a href="{ReblogURL}"><div class="permact" id="rbgbtn"><span class="paction"><i class="fa fa-retweet"></i></span>reblog</div></a>
+<a title="click the heart to like this post!"><div class="permact" id="likbtn"><span class="lkbtn">{LikeButton size="13"}</span> Like</div></a>
+</div>
+{/Block:Post3}{/block:Posts}</center></div><!--postpop3-->
+ 
+ 
+<div id="postpop4"><a id="closepost4"><div class="clopo">X</div></a><center>
+{block:Posts}{Block:Post4}
+<div class="popuppost">
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}>{/block:Quote}
+{Block:Text}{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>{/block:Text}
+{Block:Photo}<img src="{PhotoURL-500}">{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photo}
+{block:Photoset}<div class="photo">{Photoset-500}</div>{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photoset}
+{Block:Audio}{Block:AudioEmbed}{AudioEmbed-500}{/Block:AudioEmbed}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/Block:Audio}
+{block:Video}{Video-500}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Video}
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>{/block:Answer}
+{Block:Link}<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}{/block:Link}
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>{/block:Chat}
+</div><!--popuppost-->
+<div class="popperma">Posted {timeago} with {NoteCountWithLabel}.
+{Block:HasTags}<div class="itags">{block:Tags}<a href="{TagURL}"><span class="fa fa-tag"></span> {Tag}</a>{/block:Tags}</div>{/Block:HasTags}
+</div><!--popperma-->
+<div class="permaactions">
+<a href="{Permalink}"><div class="permact" id="perbtn"><span class="paction"><i class="fa fa-external-link"></i></span>permalink</div></a>
+<a href="{ReblogURL}"><div class="permact" id="rbgbtn"><span class="paction"><i class="fa fa-retweet"></i></span>reblog</div></a>
+<a title="click the heart to like this post!"><div class="permact" id="likbtn"><span class="lkbtn">{LikeButton size="13"}</span> Like</div></a>
+</div>
+{/Block:Post4}{/block:Posts}</center></div><!--postpop4-->
+ 
+ 
+<div id="postpop5"><a id="closepost5"><div class="clopo">X</div></a><center>
+{block:Posts}{Block:Post5}
+<div class="popuppost">
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}>{/block:Quote}
+{Block:Text}{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>{/block:Text}
+{Block:Photo}<img src="{PhotoURL-500}">{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photo}
+{block:Photoset}<div class="photo">{Photoset-500}</div>{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photoset}
+{Block:Audio}{Block:AudioEmbed}{AudioEmbed-500}{/Block:AudioEmbed}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/Block:Audio}
+{block:Video}{Video-500}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Video}
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>{/block:Answer}
+{Block:Link}<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}{/block:Link}
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>{/block:Chat}
+</div><!--popuppost-->
+<div class="popperma">Posted {timeago} with {NoteCountWithLabel}.
+{Block:HasTags}<div class="itags">{block:Tags}<a href="{TagURL}"><span class="fa fa-tag"></span> {Tag}</a>{/block:Tags}</div>{/Block:HasTags}
+</div><!--popperma-->
+<div class="permaactions">
+<a href="{Permalink}"><div class="permact" id="perbtn"><span class="paction"><i class="fa fa-external-link"></i></span>permalink</div></a>
+<a href="{ReblogURL}"><div class="permact" id="rbgbtn"><span class="paction"><i class="fa fa-retweet"></i></span>reblog</div></a>
+<a title="click the heart to like this post!"><div class="permact" id="likbtn"><span class="lkbtn">{LikeButton size="13"}</span> Like</div></a>
+</div>
+{/Block:Post5}{/block:Posts}</center></div><!--postpop5-->
+ 
+ 
+<div id="postpop5"><a id="closepost5"><div class="clopo">X</div></a><center>
+{block:Posts}{Block:Post5}
+<div class="popuppost">
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}>{/block:Quote}
+{Block:Text}{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>{/block:Text}
+{Block:Photo}<img src="{PhotoURL-500}">{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photo}
+{block:Photoset}<div class="photo">{Photoset-500}</div>{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photoset}
+{Block:Audio}{Block:AudioEmbed}{AudioEmbed-500}{/Block:AudioEmbed}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/Block:Audio}
+{block:Video}{Video-500}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Video}
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>{/block:Answer}
+{Block:Link}<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}{/block:Link}
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>{/block:Chat}
+</div><!--popuppost-->
+<div class="popperma">Posted {timeago} with {NoteCountWithLabel}.
+{Block:HasTags}<div class="itags">{block:Tags}<a href="{TagURL}"><span class="fa fa-tag"></span> {Tag}</a>{/block:Tags}</div>{/Block:HasTags}
+</div><!--popperma-->
+<div class="permaactions">
+<a href="{Permalink}"><div class="permact" id="perbtn"><span class="paction"><i class="fa fa-external-link"></i></span>permalink</div></a>
+<a href="{ReblogURL}"><div class="permact" id="rbgbtn"><span class="paction"><i class="fa fa-retweet"></i></span>reblog</div></a>
+<a title="click the heart to like this post!"><div class="permact" id="likbtn"><span class="lkbtn">{LikeButton size="13"}</span> Like</div></a>
+</div>
+{/Block:Post5}{/block:Posts}</center></div><!--postpop5-->
+ 
+ 
+<div id="postpop6"><a id="closepost6"><div class="clopo">X</div></a><center>
+{block:Posts}{Block:Post6}
+<div class="popuppost">
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}>{/block:Quote}
+{Block:Text}{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>{/block:Text}
+{Block:Photo}<img src="{PhotoURL-500}">{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photo}
+{block:Photoset}<div class="photo">{Photoset-500}</div>{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photoset}
+{Block:Audio}{Block:AudioEmbed}{AudioEmbed-500}{/Block:AudioEmbed}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/Block:Audio}
+{block:Video}{Video-500}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Video}
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>{/block:Answer}
+{Block:Link}<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}{/block:Link}
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>{/block:Chat}
+</div><!--popuppost-->
+<div class="popperma">Posted {timeago} with {NoteCountWithLabel}.
+{Block:HasTags}<div class="itags">{block:Tags}<a href="{TagURL}"><span class="fa fa-tag"></span> {Tag}</a>{/block:Tags}</div>{/Block:HasTags}
+</div><!--popperma-->
+<div class="permaactions">
+<a href="{Permalink}"><div class="permact" id="perbtn"><span class="paction"><i class="fa fa-external-link"></i></span>permalink</div></a>
+<a href="{ReblogURL}"><div class="permact" id="rbgbtn"><span class="paction"><i class="fa fa-retweet"></i></span>reblog</div></a>
+<a title="click the heart to like this post!"><div class="permact" id="likbtn"><span class="lkbtn">{LikeButton size="13"}</span> Like</div></a>
+</div>
+{/Block:Post6}{/block:Posts}</center></div><!--postpop6-->
+ 
+ 
+<div id="postpop7"><a id="closepost7"><div class="clopo">X</div></a><center>
+{block:Posts}{Block:Post7}
+<div class="popuppost">
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}>{/block:Quote}
+{Block:Text}{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>{/block:Text}
+{Block:Photo}<img src="{PhotoURL-500}">{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photo}
+{block:Photoset}<div class="photo">{Photoset-500}</div>{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photoset}
+{Block:Audio}{Block:AudioEmbed}{AudioEmbed-500}{/Block:AudioEmbed}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/Block:Audio}
+{block:Video}{Video-500}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Video}
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>{/block:Answer}
+{Block:Link}<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}{/block:Link}
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>{/block:Chat}
+</div><!--popuppost-->
+<div class="popperma">Posted {timeago} with {NoteCountWithLabel}.
+{Block:HasTags}<div class="itags">{block:Tags}<a href="{TagURL}"><span class="fa fa-tag"></span> {Tag}</a>{/block:Tags}</div>{/Block:HasTags}
+</div><!--popperma-->
+<div class="permaactions">
+<a href="{Permalink}"><div class="permact" id="perbtn"><span class="paction"><i class="fa fa-external-link"></i></span>permalink</div></a>
+<a href="{ReblogURL}"><div class="permact" id="rbgbtn"><span class="paction"><i class="fa fa-retweet"></i></span>reblog</div></a>
+<a title="click the heart to like this post!"><div class="permact" id="likbtn"><span class="lkbtn">{LikeButton size="13"}</span> Like</div></a>
+</div>
+{/Block:Post7}{/block:Posts}</center></div><!--postpop7-->
+ 
+ 
+<div id="postpop8"><a id="closepost8"><div class="clopo">X</div></a><center>
+{block:Posts}{Block:Post8}
+<div class="popuppost">
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}>{/block:Quote}
+{Block:Text}{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>{/block:Text}
+{Block:Photo}<img src="{PhotoURL-500}">{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photo}
+{block:Photoset}<div class="photo">{Photoset-500}</div>{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photoset}
+{Block:Audio}{Block:AudioEmbed}{AudioEmbed-500}{/Block:AudioEmbed}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/Block:Audio}
+{block:Video}{Video-500}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Video}
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>{/block:Answer}
+{Block:Link}<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}{/block:Link}
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>{/block:Chat}
+</div><!--popuppost-->
+<div class="popperma">Posted {timeago} with {NoteCountWithLabel}.
+{Block:HasTags}<div class="itags">{block:Tags}<a href="{TagURL}"><span class="fa fa-tag"></span> {Tag}</a>{/block:Tags}</div>{/Block:HasTags}
+</div><!--popperma-->
+<div class="permaactions">
+<a href="{Permalink}"><div class="permact" id="perbtn"><span class="paction"><i class="fa fa-external-link"></i></span>permalink</div></a>
+<a href="{ReblogURL}"><div class="permact" id="rbgbtn"><span class="paction"><i class="fa fa-retweet"></i></span>reblog</div></a>
+<a title="click the heart to like this post!"><div class="permact" id="likbtn"><span class="lkbtn">{LikeButton size="13"}</span> Like</div></a>
+</div>
+{/Block:Post8}{/block:Posts}</center></div><!--postpop8-->
+ 
+ 
+<div id="postpop9"><a id="closepost9"><div class="clopo">X</div></a><center>
+{block:Posts}{Block:Post9}
+<div class="popuppost">
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}>{/block:Quote}
+{Block:Text}{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>{/block:Text}
+{Block:Photo}<img src="{PhotoURL-500}">{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photo}
+{block:Photoset}<div class="photo">{Photoset-500}</div>{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photoset}
+{Block:Audio}{Block:AudioEmbed}{AudioEmbed-500}{/Block:AudioEmbed}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/Block:Audio}
+{block:Video}{Video-500}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Video}
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>{/block:Answer}
+{Block:Link}<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}{/block:Link}
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>{/block:Chat}
+</div><!--popuppost-->
+<div class="popperma">Posted {timeago} with {NoteCountWithLabel}.
+{Block:HasTags}<div class="itags">{block:Tags}<a href="{TagURL}"><span class="fa fa-tag"></span> {Tag}</a>{/block:Tags}</div>{/Block:HasTags}
+</div><!--popperma-->
+<div class="permaactions">
+<a href="{Permalink}"><div class="permact" id="perbtn"><span class="paction"><i class="fa fa-external-link"></i></span>permalink</div></a>
+<a href="{ReblogURL}"><div class="permact" id="rbgbtn"><span class="paction"><i class="fa fa-retweet"></i></span>reblog</div></a>
+<a title="click the heart to like this post!"><div class="permact" id="likbtn"><span class="lkbtn">{LikeButton size="13"}</span> Like</div></a>
+</div>
+{/Block:Post9}{/block:Posts}</center></div><!--postpop9-->
+ 
+ 
+<div id="postpop10"><a id="closepost10"><div class="clopo">X</div></a><center>
+{block:Posts}{Block:Post10}
+<div class="popuppost">
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}>{/block:Quote}
+{Block:Text}{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>{/block:Text}
+{Block:Photo}<img src="{PhotoURL-500}">{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photo}
+{block:Photoset}<div class="photo">{Photoset-500}</div>{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photoset}
+{Block:Audio}{Block:AudioEmbed}{AudioEmbed-500}{/Block:AudioEmbed}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/Block:Audio}
+{block:Video}{Video-500}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Video}
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>{/block:Answer}
+{Block:Link}<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}{/block:Link}
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>{/block:Chat}
+</div><!--popuppost-->
+<div class="popperma">Posted {timeago} with {NoteCountWithLabel}.
+{Block:HasTags}<div class="itags">{block:Tags}<a href="{TagURL}"><span class="fa fa-tag"></span> {Tag}</a>{/block:Tags}</div>{/Block:HasTags}
+</div><!--popperma-->
+<div class="permaactions">
+<a href="{Permalink}"><div class="permact" id="perbtn"><span class="paction"><i class="fa fa-external-link"></i></span>permalink</div></a>
+<a href="{ReblogURL}"><div class="permact" id="rbgbtn"><span class="paction"><i class="fa fa-retweet"></i></span>reblog</div></a>
+<a title="click the heart to like this post!"><div class="permact" id="likbtn"><span class="lkbtn">{LikeButton size="13"}</span> Like</div></a>
+</div>
+{/Block:Post10}{/block:Posts}</center></div><!--postpop10-->
+ 
+ 
+<div id="postpop11"><a id="closepost11"><div class="clopo">X</div></a><center>
+{block:Posts}{Block:Post11}
+<div class="popuppost">
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}>{/block:Quote}
+{Block:Text}{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>{/block:Text}
+{Block:Photo}<img src="{PhotoURL-500}">{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photo}
+{block:Photoset}<div class="photo">{Photoset-500}</div>{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photoset}
+{Block:Audio}{Block:AudioEmbed}{AudioEmbed-500}{/Block:AudioEmbed}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/Block:Audio}
+{block:Video}{Video-500}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Video}
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>{/block:Answer}
+{Block:Link}<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}{/block:Link}
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>{/block:Chat}
+</div><!--popuppost-->
+<div class="popperma">Posted {timeago} with {NoteCountWithLabel}.
+{Block:HasTags}<div class="itags">{block:Tags}<a href="{TagURL}"><span class="fa fa-tag"></span> {Tag}</a>{/block:Tags}</div>{/Block:HasTags}
+</div><!--popperma-->
+<div class="permaactions">
+<a href="{Permalink}"><div class="permact" id="perbtn"><span class="paction"><i class="fa fa-external-link"></i></span>permalink</div></a>
+<a href="{ReblogURL}"><div class="permact" id="rbgbtn"><span class="paction"><i class="fa fa-retweet"></i></span>reblog</div></a>
+<a title="click the heart to like this post!"><div class="permact" id="likbtn"><span class="lkbtn">{LikeButton size="13"}</span> Like</div></a>
+</div>
+{/Block:Post11}{/block:Posts}</center></div><!--postpop11-->
+ 
+ 
+<div id="postpop12"><a id="closepost12"><div class="clopo">X</div></a><center>
+{block:Posts}{Block:Post12}
+<div class="popuppost">
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}>{/block:Quote}
+{Block:Text}{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>{/block:Text}
+{Block:Photo}<img src="{PhotoURL-500}">{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photo}
+{block:Photoset}<div class="photo">{Photoset-500}</div>{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photoset}
+{Block:Audio}{Block:AudioEmbed}{AudioEmbed-500}{/Block:AudioEmbed}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/Block:Audio}
+{block:Video}{Video-500}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Video}
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>{/block:Answer}
+{Block:Link}<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}{/block:Link}
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>{/block:Chat}
+</div><!--popuppost-->
+<div class="popperma">Posted {timeago} with {NoteCountWithLabel}.
+{Block:HasTags}<div class="itags">{block:Tags}<a href="{TagURL}"><span class="fa fa-tag"></span> {Tag}</a>{/block:Tags}</div>{/Block:HasTags}
+</div><!--popperma-->
+<div class="permaactions">
+<a href="{Permalink}"><div class="permact" id="perbtn"><span class="paction"><i class="fa fa-external-link"></i></span>permalink</div></a>
+<a href="{ReblogURL}"><div class="permact" id="rbgbtn"><span class="paction"><i class="fa fa-retweet"></i></span>reblog</div></a>
+<a title="click the heart to like this post!"><div class="permact" id="likbtn"><span class="lkbtn">{LikeButton size="13"}</span> Like</div></a>
+</div>
+{/Block:Post12}{/block:Posts}</center></div><!--postpop12-->
+ 
+ 
+<div id="postpop13"><a id="closepost13"><div class="clopo">X</div></a><center>
+{block:Posts}{Block:Post13}
+<div class="popuppost">
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}>{/block:Quote}
+{Block:Text}{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>{/block:Text}
+{Block:Photo}<img src="{PhotoURL-500}">{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photo}
+{block:Photoset}<div class="photo">{Photoset-500}</div>{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photoset}
+{Block:Audio}{Block:AudioEmbed}{AudioEmbed-500}{/Block:AudioEmbed}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/Block:Audio}
+{block:Video}{Video-500}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Video}
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>{/block:Answer}
+{Block:Link}<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}{/block:Link}
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>{/block:Chat}
+</div><!--popuppost-->
+<div class="popperma">Posted {timeago} with {NoteCountWithLabel}.
+{Block:HasTags}<div class="itags">{block:Tags}<a href="{TagURL}"><span class="fa fa-tag"></span> {Tag}</a>{/block:Tags}</div>{/Block:HasTags}
+</div><!--popperma-->
+<div class="permaactions">
+<a href="{Permalink}"><div class="permact" id="perbtn"><span class="paction"><i class="fa fa-external-link"></i></span>permalink</div></a>
+<a href="{ReblogURL}"><div class="permact" id="rbgbtn"><span class="paction"><i class="fa fa-retweet"></i></span>reblog</div></a>
+<a title="click the heart to like this post!"><div class="permact" id="likbtn"><span class="lkbtn">{LikeButton size="13"}</span> Like</div></a>
+</div>
+{/Block:Post13}{/block:Posts}</center></div><!--postpop13-->
+ 
+ 
+<div id="postpop14"><a id="closepost14"><div class="clopo">X</div></a><center>
+{block:Posts}{Block:Post14}
+<div class="popuppost">
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}>{/block:Quote}
+{Block:Text}{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>{/block:Text}
+{Block:Photo}<img src="{PhotoURL-500}">{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photo}
+{block:Photoset}<div class="photo">{Photoset-500}</div>{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photoset}
+{Block:Audio}{Block:AudioEmbed}{AudioEmbed-500}{/Block:AudioEmbed}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/Block:Audio}
+{block:Video}{Video-500}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Video}
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>{/block:Answer}
+{Block:Link}<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}{/block:Link}
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>{/block:Chat}
+</div><!--popuppost-->
+<div class="popperma">Posted {timeago} with {NoteCountWithLabel}.
+{Block:HasTags}<div class="itags">{block:Tags}<a href="{TagURL}"><span class="fa fa-tag"></span> {Tag}</a>{/block:Tags}</div>{/Block:HasTags}
+</div><!--popperma-->
+<div class="permaactions">
+<a href="{Permalink}"><div class="permact" id="perbtn"><span class="paction"><i class="fa fa-external-link"></i></span>permalink</div></a>
+<a href="{ReblogURL}"><div class="permact" id="rbgbtn"><span class="paction"><i class="fa fa-retweet"></i></span>reblog</div></a>
+<a title="click the heart to like this post!"><div class="permact" id="likbtn"><span class="lkbtn">{LikeButton size="13"}</span> Like</div></a>
+</div>
+{/Block:Post14}{/block:Posts}</center></div><!--postpop14-->
+ 
+ 
+<div id="postpop15"><a id="closepost15"><div class="clopo">X</div></a><center>
+{block:Posts}{Block:Post15}
+<div class="popuppost">
+{Block:Quote}<div class="pquote">{Quote}</div>{block:source}<div class="qsrc"><i class="fa fa-quote-left"></i> {Source} <i class="fa fa-quote-right"></i></div>{/block:source}>{/block:Quote}
+{Block:Text}{Block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{Body}</div>{/block:Text}
+{Block:Photo}<img src="{PhotoURL-500}">{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photo}
+{block:Photoset}<div class="photo">{Photoset-500}</div>{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Photoset}
+{Block:Audio}{Block:AudioEmbed}{AudioEmbed-500}{/Block:AudioEmbed}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/Block:Audio}
+{block:Video}{Video-500}{block:Caption}<div class="text">{Caption}</div>{/block:Caption}{/block:Video}
+{block:Answer}<img class="askerportrait" src="{AskerPortraitURL-40}"><div class="asktri">◀</div><div class="a"><span class="askerm"><span class="fa fa-quote-left"></span> {Asker} sent -</span><span class="q">{Question}</span></div><div class="text">{Answer}</div>{/block:Answer}
+{Block:Link}<a href="{URL}"><div class="ptitle"><i class="fa fa-link"></i> {Name} <i class="fa fa-angle-right"></i></div></a>{block:Description}<div class="text">{Description}</div>{/block:Description}{/block:Link}
+{block:Chat}{block:Title}<div class="ptitle">{Title}</div>{/block:Title}<div class="text">{block:Lines}<div class="{Alt}"><div class="line">{block:Label}<span class="name">{Label}</span>{/block:Label} {Line}<br /></div></div>{/block:Lines}</div>{/block:Chat}
+</div><!--popuppost-->
+<div class="popperma">Posted {timeago} with {NoteCountWithLabel}.
+{Block:HasTags}<div class="itags">{block:Tags}<a href="{TagURL}"><span class="fa fa-tag"></span> {Tag}</a>{/block:Tags}</div>{/Block:HasTags}
+</div><!--popperma-->
+<div class="permaactions">
+<a href="{Permalink}"><div class="permact" id="perbtn"><span class="paction"><i class="fa fa-external-link"></i></span>permalink</div></a>
+<a href="{ReblogURL}"><div class="permact" id="rbgbtn"><span class="paction"><i class="fa fa-retweet"></i></span>reblog</div></a>
+<a title="click the heart to like this post!"><div class="permact" id="likbtn"><span class="lkbtn">{LikeButton size="13"}</span> Like</div></a>
+</div>
+{/Block:Post15}{/block:Posts}</center></div><!--postpop15-->
+ 
+</body>
+</html>
