@@ -1,2 +1,0 @@
-# worldhappiness
-DH 101 
